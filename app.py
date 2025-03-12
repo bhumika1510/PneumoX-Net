@@ -55,7 +55,7 @@ import numpy as np
 from PIL import Image
 
 # Load trained model
-model = tf.keras.models.load_model("pneumonia_classifier.h5")
+model = tf.keras.models.load_model("model.h5")
 
 # Define class labels
 class_labels = {0: "🟢 Normal", 1: "🔴 Pneumonia"}
