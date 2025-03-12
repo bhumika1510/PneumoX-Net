@@ -37,3 +37,4 @@ model.keras filter=lfs diff=lfs merge=lfs -text
 IM-0001-0001.jpeg filter=lfs diff=lfs merge=lfs -text
 normal_1.jpg filter=lfs diff=lfs merge=lfs -text
 IM-0011-0001-0002.jpeg filter=lfs diff=lfs merge=lfs -text
+normal_2.jpg filter=lfs diff=lfs merge=lfs -text
