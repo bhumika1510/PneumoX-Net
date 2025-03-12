@@ -35,7 +35,6 @@
 # demo.launch()
 
 
-
 import gradio as gr
 import tensorflow as tf
 import numpy as np
@@ -46,15 +45,15 @@ model = tf.keras.models.load_model("model.keras")
 
 # Example images (stored in the same directory as app.py)
 example_images = [
-    ("normal_1.jpg", "Normal X-ray"),
-    ("normal_2.jpg", "Normal X-ray"),
-    ("pneumonia_1.jpg", "Pneumonia X-ray"),
-    ("pneumonia_2.jpg", "Pneumonia X-ray"),
+    "normal_1.jpg",
+    "normal_2.jpg",
+    "pneumonia_1.jpg",
+    "pneumonia_2.jpg"
 ]
 
 def preprocess_image(image):
     """Preprocess the input image to match model requirements."""
-    image = image.resize((244, 244))  # Resize to match model input size
+    image = image.resize((224, 224))  # Resize to match model input size
     image = np.array(image)
     image = tf.keras.applications.mobilenet_v2.preprocess_input(image)  # Apply MobileNetV2 preprocessing
     image = np.expand_dims(image, axis=0)  # Add batch dimension
@@ -75,7 +74,7 @@ demo = gr.Interface(
     outputs=gr.Label(num_top_classes=2),
     title="🩺 Pneumonia Detection",
     description="Upload a chest X-ray to check for pneumonia. Try the example images below!",
-    examples=example_images,
+    examples=[[img] for img in example_images],  # Convert to list of lists for Gradio compatibility
     theme="default",
     allow_flagging="never"
 )
