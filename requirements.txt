@@ -1,5 +1,7 @@
-tensorflow
-gradio
+
+tensorflow==2.12.0
+gradio==4.0.0
+
 numpy
 pandas
 opencv-python
