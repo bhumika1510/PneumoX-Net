@@ -47,7 +47,8 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Load the trained model
-model = tf.keras.models.load_model("model.keras")
+# model = tf.keras.models.load_model("model.keras")
+model = tf.keras.models.load_model("model.h5")
 
 # Example images (stored in the same directory as app.py)
 example_images = [
