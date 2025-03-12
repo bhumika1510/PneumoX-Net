@@ -72,8 +72,8 @@ def predict(img):
     img = preprocess_image(img)
     prediction = model.predict(img)[0]  # Get prediction
     class_index = np.argmax(prediction)  # Get highest probability class
-    confidence = round(float(np.max(prediction)) * 100, 2)  # Get confidence score correctly formatted
-    return {class_labels[class_index]: f"{confidence}%"}
+    confidence = float(np.max(prediction))  # Get confidence score
+    return {class_labels[class_index]: confidence}
 
 # Example Images (Stored in the main directory)
 examples = [
