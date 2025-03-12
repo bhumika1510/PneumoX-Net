@@ -39,6 +39,12 @@ import gradio as gr
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+import os
+
+# Disable OneDNN optimizations
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+# Force TensorFlow to use CPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Load the trained model
 model = tf.keras.models.load_model("model.keras")
@@ -80,3 +86,4 @@ demo = gr.Interface(
 )
 
 demo.launch()
+
