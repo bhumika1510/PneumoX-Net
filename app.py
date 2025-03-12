@@ -86,18 +86,26 @@ examples = [
 
 # Define Custom CSS
 custom_css = """
+body {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+}
 h1 {
     text-align: center;
-    color: #1f2937;
+    color: #f8fafc;
     font-size: 2.5rem;
 }
 p {
     text-align: center;
     font-size: 1.2rem;
-    color: #374151;
+    color: #cbd5e1;
 }
 .gradio-container {
-    background-color: #f9fafb;
+    background-color: #334155;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 """
 
