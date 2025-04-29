@@ -17,13 +17,13 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 
 [![Hugging Face Spaces](https://img.shields.io/badge/Live%20Demo-Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/dkg-2/PneumoX-Net)
 
-PneumoX-Net is a deep learning-powered diagnostic tool that classifies **Pneumonia** vs **Normal** chest X-rays. It aids early screening and diagnosis, especially in low-resource settings.
+PneumoX-Net is a deep learning-powered diagnostic tool that classifies **Pneumonia** vs **Normal** chest X-rays. It is designed to aid early detection and medical decision-making, especially in resource-constrained areas.
 
 ---
 
 ## 🧠 Model Overview
 
-PneumoX-Net is built on **MobileNetV2** using transfer learning, fine-tuned for binary classification (Pneumonia vs. Normal) on the NIH Chest X-ray dataset. It has demonstrated high diagnostic accuracy on unseen X-ray images.
+PneumoX-Net is based on **MobileNetV2**, a lightweight convolutional neural network fine-tuned on a curated dataset of chest X-rays. It performs binary classification with high diagnostic accuracy.
 
 ---
 
@@ -38,27 +38,40 @@ PneumoX-Net is built on **MobileNetV2** using transfer learning, fine-tuned for 
 | **AUC**      | 99.25%  |
 | **Log Loss** | 0.1388  |
 
-> 🔍 High recall ensures minimal false negatives — a crucial metric for healthcare models.
+> ✅ **High Recall** ensures few false negatives, which is critical for medical screening tools.
+
+---
+
+## 📦 Dataset
+
+- **Name**: Chest X-ray Images (Pneumonia)
+- **Source**: [Kaggle - Paul Mooney](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+- **Description**: A labeled dataset containing 5,863 chest X-ray images (JPEG) categorized into:
+  - `PNEUMONIA`
+  - `NORMAL`
 
 ---
 
 ## 🛠 Technology Stack
 
 - 🔹 **Deep Learning**: TensorFlow / Keras
-- 🔹 **Pretrained Backbone**: MobileNetV2
-- 🔹 **Image Processing**: OpenCV, PIL (Pillow)
-- 🔹 **Deployment**: Gradio + Hugging Face Spaces
+- 🔹 **Architecture**: MobileNetV2 (Transfer Learning)
+- 🔹 **Image Processing**: OpenCV, Pillow (PIL)
 - 🔹 **Visualization**: Matplotlib, Seaborn
+- 🔹 **Deployment**: Gradio + Hugging Face Spaces
 
 ---
 
 ## 🔗 Resources
 
-- 📓 **Colab Notebook** (Model Training & Evaluation):  
+- 📓 **Model Training Notebook (Colab)**:  
   👉 [Open in Colab](https://colab.research.google.com/drive/1pwfrmO31SE7bxQdCDwPcoQJqxJjpi1st?usp=sharing)
 
-- 🧪 **Try the Model Live**:  
-  👉 [Hugging Face Space](https://huggingface.co/spaces/dkg-2/PneumoX-Net)
+- 🧪 **Live Demo (Hugging Face)**:  
+  👉 [Try PneumoX-Net](https://huggingface.co/spaces/dkg-2/PneumoX-Net)
+
+---
+
 
 ## 💻 Run Locally
 
