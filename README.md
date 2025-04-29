@@ -77,7 +77,7 @@ PneumoX-Net is based on **MobileNetV2**, a lightweight convolutional neural netw
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/PneumoX-Net.git
+git clone https://github.com/dkg-2/PneumoX-Net.git
 cd PneumoX-Net
 pip install -r requirements.txt
 python app/app.py
